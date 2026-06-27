@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Yashraj Phadtare</title>
+<meta name="description" content="Yashraj Phadtare - Information Technology student at Penn State. Notes, projects, and a terminal that talks back." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="noise"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="progress-rail"><div class="progress-fill" id="progressFill"></div></div>
+
+<nav>
+  <a class="logo" href="#top">yp<span class="blink-dash">_</span></a>
+  <div class="nav-links">
+    <a href="#about">about</a>
+    <a href="#now">now</a>
+    <a href="#work">work</a>
+    <a href="#projects">projects</a>
+    <a href="#contact">say hi</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <p class="kicker">hey, I'm -</p>
+    <h1 class="big-name">
+      Yashraj<br/>
+      Phadtare
+      <svg class="scribble" viewBox="0 0 300 24" preserveAspectRatio="none"><path d="M2 18 C 60 4, 110 26, 160 12 S 260 2, 298 14" /></svg>
+    </h1>
+    <p class="role-line">IT student, Penn State · builds full-stack things, automation pipelines, and the occasional embedded mess of C++ <span class="wave">👋</span></p>
+
+    <div class="terminal" id="terminal">
+      <div class="terminal-bar">
+        <span class="tdot red"></span><span class="tdot yellow"></span><span class="tdot green"></span>
+        <span class="terminal-title">guest@yashraj - zsh</span>
+      </div>
+      <div class="terminal-body" id="termBody">
+        <div class="term-line">type <b>help</b> to see what this thing does</div>
+        <div class="term-line">$ <span class="term-cursor">▌</span></div>
+      </div>
+      <input id="termInput" class="term-input" autocomplete="off" spellcheck="false" aria-label="terminal input" />
+    </div>
+
+    <div class="hero-cta">
+      <a class="btn-line" href="#projects">see what I've built ↓</a>
+      <a class="btn-line ghost" href="#contact">just email me →</a>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <p class="tag">01 / who's this</p>
+    <div class="about-grid">
+      <div class="about-copy">
+        <p>I'm a senior at Penn State studying Information Technology - currently holding a 4.0 and Dean's List every term, mostly because I genuinely like this stuff, not because I'm trying to win something.</p>
+        <p>I spend most of my time moving between layers: Python and FastAPI on the backend, React up front, and every so often crawling down into C/C++ to make hardware behave. I got there the unglamorous way - CS50 on my own time, then a research role, then an internship where I learned firmware doesn't care about your deadlines.</p>
+        <p>U.S. permanent resident, graduating December 2026, and actively looking for Fall/Summer 2026 SWE, data, or AI internships. If none of that matters to you yet, scroll to the projects - they say it better than I can.</p>
+      </div>
+      <div class="fact-card">
+        <div class="fact-row"><span>school</span><span>Penn State Harrisburg</span></div>
+        <div class="fact-row"><span>degree</span><span>B.S. Information Technology</span></div>
+        <div class="fact-row"><span>gpa</span><span>4.0 / 4.0</span></div>
+        <div class="fact-row"><span>grad</span><span>Dec 2026</span></div>
+        <div class="fact-row"><span>status</span><span>U.S. Permanent Resident</span></div>
+        <div class="fact-row"><span>coursework</span><span>DS&amp;A, OS, DB Systems, Networks, Discrete Math, Linear Algebra</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="now">
+  <div class="wrap">
+    <p class="tag">02 / right now</p>
+    <div class="now-card">
+      <p>🔬 Researching at Penn State - building Python tooling for generative pattern simulation</p>
+      <p>🛰️ Applying to Fall/Summer 2026 internships (and yes, a couple of space companies)</p>
+      <p>📚 Slowly reading through a systems-design backlog I keep adding to instead of finishing</p>
+      <p class="now-updated">last touched this section: <span id="lastUpdated"></span></p>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <p class="tag">03 / experience</p>
+    <div class="timeline">
+      <div class="tl-row">
+        <div class="tl-when">Feb 2025 - now</div>
+        <div class="tl-what">
+          <h3>Undergraduate Research Assistant</h3>
+          <p class="tl-where">Pennsylvania State University, York PA</p>
+          <ul>
+            <li>Built a Python generative model for natural pattern formation, then spent way too long shaving 35% off its runtime with vectorized NumPy and smarter memory allocation.</li>
+            <li>Wrote an image-processing pipeline (Amira + Python) doing 3D reconstruction across 500+ datasets so nobody has to do it by hand.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-when">Jun 2024</div>
+        <div class="tl-what">
+          <h3>Software &amp; Automation Intern</h3>
+          <p class="tl-where">PNT Robotics &amp; Automation LLP, Mumbai</p>
+          <ul>
+            <li>Wrote embedded control logic in C/C++ for sensor-actuator systems; real-time event handling cut response latency 40% across test cycles.</li>
+            <li>Debugged firmware across 6+ hardware modules - mostly concurrency and timing bugs that taught me to stop trusting "it works on my bench."</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <p class="tag">04 / things I've built</p>
+    <p class="proj-note">All of these (and more) live on <a href="https://github.com/Yashraj191004" target="_blank" rel="noopener">github.com/Yashraj191004</a>.</p>
+
+    <p class="proj-sub">featured</p>
+    <div class="project-list">
+
+      <article class="proj-card">
+        <div class="proj-head">
+          <h3>AI Study Assistant</h3>
+          <span class="proj-tag">full-stack SaaS</span>
+        </div>
+        <p class="proj-stack">React · FastAPI · Python · SQLite · NLP · Ollama · Selenium</p>
+        <p>ChatGPT-style streaming responses over multi-threaded chat sessions, holding sub-second latency under concurrent load. OCR pipeline (Tesseract) reads PDFs and images into a 100+ page knowledge base; an NLP classifier routes assignments - MCQ, coding, writing - to the right prompt template, with Selenium quietly scraping deadlines in the background.</p>
+        <a class="proj-link" href="https://github.com/Yashraj191004/ai-chatbot" target="_blank" rel="noopener">view on GitHub →</a>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-head">
+          <h3>Job Agent</h3>
+          <span class="proj-tag">automation</span>
+        </div>
+        <p class="proj-stack">Python · Flask · Streamlit · SQLite · LLMs · Chrome Extension</p>
+        <p>Built this because applying to internships by hand was eating my week. Flask API + Streamlit dashboard + a Chrome extension that auto-fills Greenhouse, Lever, and Workday forms. A routing layer plays four LLM providers against each other to score job fit and draft tailored resumes/cover letters, on top of a dedupe pipeline handling 1,000+ scraped postings.</p>
+        <a class="proj-link" href="https://github.com/Yashraj191004/JobAuto" target="_blank" rel="noopener">view on GitHub →</a>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-head">
+          <h3>Momentum Trading System</h3>
+          <span class="proj-tag">real-time systems</span>
+        </div>
+        <p class="proj-stack">Python · Flask · Selenium · Socket.IO · WebSockets</p>
+        <p>Streams Top Movers from the Robinhood API, applies a momentum-based buy/sell strategy, and executes trades on a simulated platform via Selenium. Live dashboard tracks price movement, open positions, and P/L with persistent trade logging - made backtesting across 50+ simulated sessions actually bearable.</p>
+        <a class="proj-link" href="https://github.com/Yashraj191004/Trading" target="_blank" rel="noopener">view on GitHub →</a>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-head">
+          <h3>Facebook Clone</h3>
+          <span class="proj-tag">MERN</span>
+        </div>
+        <p class="proj-stack">MongoDB · Express · React · Node.js · Socket.IO · Cloudinary</p>
+        <p>A full MERN social platform - posts, friends, likes, comments - with real-time chat over Socket.IO and Cloudinary handling media uploads. Mostly built to actually understand auth and real-time state instead of copy-pasting it.</p>
+        <a class="proj-link" href="https://github.com/Yashraj191004/facebook-clone" target="_blank" rel="noopener">view on GitHub →</a>
+      </article>
+    </div>
+
+    <p class="proj-sub">smaller builds</p>
+    <div class="project-list">
+
+      <article class="proj-card">
+        <div class="proj-head">
+          <h3>CarBase</h3>
+          <span class="proj-tag">data extraction</span>
+        </div>
+        <p class="proj-stack">Python · SQL · OCR</p>
+        <p>Extracts engine-oil specifications straight out of vehicle manuals - regex parsing, context filtering, table-aware logic, and selective OCR recover vehicle metadata, engine variants, oil capacities, and viscosity recommendations into normalized data.</p>
+        <a class="proj-link" href="https://github.com/Yashraj191004/car_base" target="_blank" rel="noopener">view on GitHub →</a>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-head">
+          <h3>CS50 Chat</h3>
+          <span class="proj-tag">real-time messaging</span>
+        </div>
+        <p class="proj-stack">Python · Flask</p>
+        <p>A real-time private messaging platform with a clean account system, built while working through CS50 - the project that got me hooked on real-time backend work in the first place.</p>
+        <a class="proj-link" href="https://github.com/Yashraj191004/CS50-Chat" target="_blank" rel="noopener">view on GitHub →</a>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-head">
+          <h3>Bank Management System</h3>
+          <span class="proj-tag">C++</span>
+        </div>
+        <p class="proj-stack">C++</p>
+        <p>A console banking application - balance checks, withdrawals, deposits, transaction history. Unglamorous, but it's where I actually learned how file I/O and state management work without a framework holding my hand.</p>
+        <a class="proj-link" href="https://github.com/Yashraj191004/Bank" target="_blank" rel="noopener">view on GitHub →</a>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-head">
+          <h3>Chrome Dino Game, in C</h3>
+          <span class="proj-tag">C</span>
+        </div>
+        <p class="proj-stack">C</p>
+        <p>A terminal clone of the Chrome dino game - game loop, collision detection, score tracking, and a sleep-based timer controlling obstacle speed. Built for fun, kept because it's a decent reminder that games are just loops and state.</p>
+        <a class="proj-link" href="https://github.com/Yashraj191004/LikeDyno-Game" target="_blank" rel="noopener">view on GitHub →</a>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-head">
+          <h3>PetStore Website</h3>
+          <span class="proj-tag">web</span>
+        </div>
+        <p class="proj-stack">HTML · CSS · JavaScript</p>
+        <p>A storefront for pet food and pet services - one of my earlier front-end builds, before I started reaching for React for everything.</p>
+        <a class="proj-link" href="https://github.com/Yashraj191004/petstore" target="_blank" rel="noopener">view on GitHub →</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <p class="tag">05 / say hi</p>
+    <div class="contact-box">
+      <h2>Got an internship, a project, or just want to talk shop?</h2>
+      <p>I check email more than I'd like to admit. Fastest way to reach me:</p>
+      <a class="big-email" href="mailto:phadtareyashraj@gmail.com">phadtareyashraj@gmail.com</a>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/yashraj-phadtare-a0ab30250/" target="_blank" rel="noopener">LinkedIn</a>
+        <span class="sep">·</span>
+        <a href="https://github.com/Yashraj191004" target="_blank" rel="noopener">GitHub</a>
+        <span class="sep">·</span>
+        <a href="mailto:phadtareyashraj@gmail.com">Email</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>handwritten with HTML/CSS, no template, occasional bugs left in on purpose &mdash; <span id="year"></span></p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
