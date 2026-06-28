@@ -31,24 +31,25 @@
   <div class="hero-inner">
     <p class="kicker">hey, I'm -</p>
     <h1 class="big-name">
-      Yashraj<br/>
-      Phadtare
+      <span class="name-text">
+        <span class="name-line"><span>Yashraj</span></span>
+        <span class="name-line"><span>Phadtare</span></span>
+      </span>
       <svg class="scribble" viewBox="0 0 300 24" preserveAspectRatio="none"><path d="M2 18 C 60 4, 110 26, 160 12 S 260 2, 298 14" /></svg>
     </h1>
     <p class="role-line">IT student, Penn State · builds full-stack things, automation pipelines, and the occasional embedded mess of C++ <span class="wave">hi</span></p>
 
-    <div class="signal-board" aria-label="portfolio highlights">
-      <div class="signal-stat">
-        <span class="signal-num">4.0</span>
-        <span class="signal-label">GPA, every term Dean's List</span>
+    <div class="build-board" aria-label="interactive build modes">
+      <div class="build-tabs" role="tablist" aria-label="build modes">
+        <button class="build-tab is-active" type="button" data-build="learn">learn</button>
+        <button class="build-tab" type="button" data-build="automate">automate</button>
+        <button class="build-tab" type="button" data-build="ship">ship</button>
+        <button class="build-tab" type="button" data-build="debug">debug</button>
       </div>
-      <div class="signal-stat">
-        <span class="signal-num">35%</span>
-        <span class="signal-label">runtime cut in research tooling</span>
-      </div>
-      <div class="signal-stat">
-        <span class="signal-num">500+</span>
-        <span class="signal-label">datasets through image pipelines</span>
+      <div class="build-output">
+        <p class="build-path" id="buildPath">~/yashraj/mode/learn</p>
+        <p class="build-title" id="buildTitle">I turn curiosity into working demos.</p>
+        <p class="build-copy" id="buildCopy">Give me a new API, messy docs, or a half-formed idea and I will usually come back with a small thing that runs.</p>
       </div>
     </div>
 
@@ -71,19 +72,18 @@
   </div>
 </header>
 
-<section id="about">
+<section id="about" data-ghost="01">
   <div class="wrap">
     <p class="tag">01 / who's this</p>
     <div class="about-grid">
       <div class="about-copy">
-        <p>I'm a senior at Penn State studying Information Technology - currently holding a 4.0 and Dean's List every term, mostly because I genuinely like this stuff, not because I'm trying to win something.</p>
+        <p>I'm a senior at Penn State studying Information Technology. I genuinely like this stuff: the weird little gap between "I understand the idea" and "I made it work on a real machine."</p>
         <p>I spend most of my time moving between layers: Python and FastAPI on the backend, React up front, and every so often crawling down into C/C++ to make hardware behave. I got there the unglamorous way - CS50 on my own time, then a research role, then an internship where I learned firmware doesn't care about your deadlines.</p>
         <p>U.S. permanent resident, graduating December 2026, and actively looking for Fall/Summer 2026 SWE, data, or AI internships. If none of that matters to you yet, scroll to the projects - they say it better than I can.</p>
       </div>
       <div class="fact-card">
         <div class="fact-row"><span>school</span><span>Penn State Harrisburg</span></div>
         <div class="fact-row"><span>degree</span><span>B.S. Information Technology</span></div>
-        <div class="fact-row"><span>gpa</span><span>4.0 / 4.0</span></div>
         <div class="fact-row"><span>grad</span><span>Dec 2026</span></div>
         <div class="fact-row"><span>status</span><span>U.S. Permanent Resident</span></div>
         <div class="fact-row"><span>coursework</span><span>DS&amp;A, OS, DB Systems, Networks, Discrete Math, Linear Algebra</span></div>
@@ -92,9 +92,9 @@
 
     <div class="lab-panel" aria-label="Yashraj's engineering strengths">
       <div class="lab-copy">
-        <p class="proj-sub">candidate signal</p>
-        <h2>Useful across the stack, happiest at the messy edges.</h2>
-        <p>I like projects where the frontend, backend, data, and automation parts all have to agree with each other. The pattern so far: find the slow/manual piece, build the tool, then make it reliable enough that someone else can use it.</p>
+        <p class="proj-sub">how I think</p>
+        <h2>Find the annoying part. Build the lever.</h2>
+        <p>I like projects where the frontend, backend, data, and automation parts all have to agree with each other. The pattern so far: notice the slow/manual piece, make it visible, then build a tool around it.</p>
       </div>
       <div class="signal-map">
         <div class="map-track"></div>
@@ -109,10 +109,11 @@
   </div>
 </section>
 
-<section id="now">
+<section id="now" data-ghost="02">
   <div class="wrap">
     <p class="tag">02 / right now</p>
     <div class="now-card">
+      <span class="now-live">live</span>
       <p>🔬 Researching at Penn State - building Python tooling for generative pattern simulation</p>
       <p>🛰️ Applying to Fall/Summer 2026 internships (and yes, a couple of space companies)</p>
       <p>📚 Slowly reading through a systems-design backlog I keep adding to instead of finishing</p>
@@ -121,7 +122,7 @@
   </div>
 </section>
 
-<section id="work">
+<section id="work" data-ghost="03">
   <div class="wrap">
     <p class="tag">03 / experience</p>
     <div class="timeline">
@@ -131,8 +132,8 @@
           <h3>Undergraduate Research Assistant</h3>
           <p class="tl-where">Pennsylvania State University, York PA</p>
           <ul>
-            <li>Built a Python generative model for natural pattern formation, then spent way too long shaving 35% off its runtime with vectorized NumPy and smarter memory allocation.</li>
-            <li>Wrote an image-processing pipeline (Amira + Python) doing 3D reconstruction across 500+ datasets so nobody has to do it by hand.</li>
+            <li>Built a Python generative model for natural pattern formation, then tuned the slow parts with vectorized NumPy and cleaner memory use.</li>
+            <li>Wrote an image-processing pipeline (Amira + Python) for 3D reconstruction so repetitive analysis work could move faster and stay consistent.</li>
           </ul>
         </div>
       </div>
@@ -151,7 +152,7 @@
   </div>
 </section>
 
-<section id="projects">
+<section id="projects" data-ghost="04">
   <div class="wrap">
     <p class="tag">04 / things I've built</p>
     <p class="proj-note">All of these (and more) live on <a href="https://github.com/Yashraj191004" target="_blank" rel="noopener">github.com/Yashraj191004</a>.</p>
@@ -257,7 +258,7 @@
   </div>
 </section>
 
-<section id="contact">
+<section id="contact" data-ghost="05">
   <div class="wrap">
     <p class="tag">05 / say hi</p>
     <div class="contact-box">
