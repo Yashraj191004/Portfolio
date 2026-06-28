@@ -7,7 +7,7 @@ if (dot && ring) {
     mx = e.clientX; my = e.clientY;
     dot.style.left = mx + 'px'; dot.style.top = my + 'px';
   });
-  document.querySelectorAll('a, button, input, .proj-card').forEach(el => {
+  document.querySelectorAll('a, button, input, .proj-card, .signal-stat, .map-node').forEach(el => {
     el.addEventListener('mouseenter', () => { ring.style.width = '46px'; ring.style.height = '46px'; ring.style.borderColor = '#ff7a45'; });
     el.addEventListener('mouseleave', () => { ring.style.width = '30px'; ring.style.height = '30px'; ring.style.borderColor = '#a89e8c'; });
   });
@@ -40,8 +40,9 @@ const termBody = document.getElementById('termBody');
 const termInput = document.getElementById('termInput');
 
 const COMMANDS = {
-  help: () => "commands: about, projects, work, contact, gpa, sudo hire-me",
+  help: () => "commands: about, signal, projects, work, contact, gpa, sudo hire-me",
   about: () => "Penn State '26, IT major, builds full-stack + automation + occasional embedded C++.",
+  signal: () => "4.0 GPA, 35% research runtime improvement, 500+ datasets processed, and a thing for useful automation.",
   projects: () => "AI Study Assistant, Job Agent, Momentum Trading System, Facebook Clone, CarBase, CS50 Chat, Bank Management System, Dino Game, PetStore - scroll down ↓",
   work: () => "Research Assistant @ Penn State (now) · Automation Intern @ PNT Robotics (2024)",
   contact: () => "phadtareyashraj@gmail.com - fastest way to reach me.",
