@@ -52,12 +52,17 @@ const termBody = document.getElementById('termBody');
 const termInput = document.getElementById('termInput');
 
 const COMMANDS = {
-  help: () => "commands: about, mode, projects, work, contact, sudo hire-me",
+  help: () => "commands: about, mode, projects, work, contact, clear, sudo hire-me",
   about: () => "Penn State '26, IT major, builds full-stack + automation + occasional embedded C++.",
   mode: () => "current mode: build small, learn fast, automate the boring parts, then polish until it feels human.",
   projects: () => "AI Study Assistant, Job Agent, Momentum Trading System, Facebook Clone, CarBase, CS50 Chat, Bank Management System, Dino Game, PetStore - scroll down ↓",
   work: () => "Research Assistant @ Penn State (now) · Automation Intern @ PNT Robotics (2024)",
   contact: () => "phadtareyashraj@gmail.com - fastest way to reach me.",
+  clear: () => {
+    if (!termBody) return "";
+    termBody.innerHTML = '<div class="term-line">$ <span class="term-cursor">▌</span></div>';
+    return "";
+  },
   "sudo hire-me": () => "permission granted. → scroll to 'say hi' and send an email.",
   whoami: () => "you, currently typing into a portfolio terminal instead of scrolling. respect.",
 };
