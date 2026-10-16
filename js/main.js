@@ -39,13 +39,9 @@ window.addEventListener('scroll', () => {
   if (progressFill) progressFill.style.width = pct + '%';
 });
 
-// ---- footer year + "last touched" ----
+// ---- footer year ----
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
-const lastUpdated = document.getElementById('lastUpdated');
-if (lastUpdated) {
-  lastUpdated.textContent = new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-}
 
 // ---- mini terminal ----
 const termBody = document.getElementById('termBody');
